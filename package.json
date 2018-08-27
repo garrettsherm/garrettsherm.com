@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-dev": "webpack --mode development",
-    "build-dev-watch": "webpack --mode development --watch",
-    "build-prod": "webpack --mode production",
+    "clean-public": "rm -rf ./public",
+    "build-dev": "npm run clean-public && webpack --mode development",
+    "build-dev-watch": "npm run clean-public && webpack --mode development --watch",
+    "build-prod": "npm run clean-public && webpack --mode production",
     "dev": "DEBUG=gs nodemon ./start.js",
     "dev-build": "npm run build-dev && npm run dev",
     "dev-build-watch": "npm run build-dev-watch & npm run dev",
