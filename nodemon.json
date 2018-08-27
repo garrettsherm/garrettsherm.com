@@ -1,0 +1,9 @@
+{
+	"verbose": true,
+	"ignore": [
+		"src/*", 
+		"public/*", 
+		"views/*",
+		"html/*"
+	]
+}

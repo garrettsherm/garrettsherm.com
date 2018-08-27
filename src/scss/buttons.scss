@@ -1,0 +1,46 @@
+/* Button 1 - Pulse Styles */
+.button-pulse {
+	font-family: 'Poppins';
+	font-weight: 600;
+	font-size: 18px;
+	background: none;
+	border: 3px solid;
+	line-height: 1;
+	margin: 15px;
+	padding: 15px 30px;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.button-pulse {
+	color: white;
+	border-color: #ffffff;
+	transition: 0.25s;
+
+	&:hover, &:focus {
+		animation: pulse 1s;
+		box-shadow: 0 1em 1em 0 rgba(#000000, .4);
+		border-color: #ffffff;
+		background-color: #ffffff;
+		color: #222222;
+	}
+
+	a {
+		color: inherit;
+	}
+}
+
+/* Button 1- Pulse Animation*/
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 1em #8E221D;
+		border-color: #ffffff;
+		background-color: #ffffff;
+		color: #000000;
+	}
+}
