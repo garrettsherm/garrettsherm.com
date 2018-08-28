@@ -4,6 +4,7 @@
 		"src/*", 
 		"public/*", 
 		"views/*",
-		"html/*"
+		"html/*",
+		"logs/*"
 	]
 }

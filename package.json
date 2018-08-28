@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean-logs": "rm -rf ./logs && mkdir logs",
     "clean-public": "rm -rf ./public",
     "build-dev": "npm run clean-public && webpack --mode development",
     "build-dev-watch": "npm run clean-public && webpack --mode development --watch",
     "build-prod": "npm run clean-public && webpack --mode production",
-    "dev": "DEBUG=gs nodemon ./start.js",
+    "dev": "nodemon ./start.js",
     "dev-build": "npm run build-dev && npm run dev",
     "dev-build-watch": "npm run build-dev-watch & npm run dev",
     "start": "npm run build-prod && node ./start.js"
@@ -21,14 +22,18 @@
     "bootstrap": "^4.1.3",
     "cookie-parser": "^1.4.3",
     "debug": "^3.1.0",
+    "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "helmet": "^3.13.0",
     "http-errors": "^1.7.0",
     "jquery": "^3.3.1",
     "lodash": "^4.17.10",
     "morgan": "^1.9.0",
     "nodemon": "^1.18.3",
-    "popper.js": "^1.14.4"
+    "popper.js": "^1.14.4",
+    "winston": "^3.0.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.2.0",

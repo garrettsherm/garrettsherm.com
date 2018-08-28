@@ -1,14 +1,19 @@
 // Based on ./bin/www script given in express generator
 
 // Node Modules
-const debug = require('debug')('gs');
 const http = require('http');
+const logger = require('./utils/logger');
+
+// import variables from variables.env
+require('dotenv').config({path: __dirname + '/variables.env'});
 
 // Get Express app from app.js
 const app = require('./app');
 
 // Set Port
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '3001');
+logger.debug(`Port ${port} set`);
+
 app.set('port', port);
 
 // Create http server using Express App
@@ -26,6 +31,7 @@ server.on('listening', onListening);
 
 // Get normailzed port
 function normalizePort(val) {
+
   const port = parseInt(val, 10);
 
   if (isNaN(port)) {
@@ -51,11 +57,11 @@ function onError(error) {
 
   switch (error.code) {
     case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
+      logger.error(`${bind} requires elevated privileges`);
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
+      logger.error(`${bind} is already in use`);
       process.exit(1);
       break;
     default:
@@ -69,5 +75,5 @@ function onListening() {
   const bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  logger.info(`Listening on ${bind}`);
 }
