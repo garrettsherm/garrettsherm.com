@@ -6,9 +6,9 @@
   "scripts": {
     "clean-logs": "rm -rf ./logs && mkdir logs",
     "clean-public": "rm -rf ./public && mkdir public",
-    "build-dev": "webpack --mode development",
-    "build-dev-watch": "webpack --mode development --watch",
-    "build-prod": "webpack --mode=production",
+    "build-dev": "webpack --config webpack.dev.js",
+    "build-dev-watch": "webpack --config webpack.dev.js --watch",
+    "build-prod": "webpack --config webpack.prod.js",
     "dev": "nodemon ./start.js",
     "dev-build": "npm run build-dev && npm run dev",
     "dev-build-watch": "npm run build-dev-watch & npm run dev",
