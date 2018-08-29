@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "clean-logs": "rm -rf ./logs && mkdir logs",
-    "clean-public": "rm -rf ./public",
-    "build-dev": "npm run clean-public && webpack --mode development",
-    "build-dev-watch": "npm run clean-public && webpack --mode development --watch",
-    "build-prod": "npm run clean-public && webpack --mode production",
+    "clean-public": "rm -rf ./public && mkdir public",
+    "build-dev": "webpack --mode development",
+    "build-dev-watch": "webpack --mode development --watch",
+    "build-prod": "webpack --mode=production",
     "dev": "nodemon ./start.js",
     "dev-build": "npm run build-dev && npm run dev",
     "dev-build-watch": "npm run build-dev-watch & npm run dev",
@@ -54,8 +54,11 @@
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.22.1",
+    "uglifyjs-webpack-plugin": "^1.3.0",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
-    "webpack-md5-hash": "0.0.6"
+    "webpack-dev-server": "^3.1.6",
+    "webpack-md5-hash": "0.0.6",
+    "webpack-merge": "^4.1.4"
   }
 }

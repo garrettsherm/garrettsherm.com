@@ -11,7 +11,7 @@ const logger = createLogger({
 		// error log to file
 		new transports.File({
 			level: 'error',
-			filename: './logs/errors.log',
+			filename: './logs/error.log',
 			handleExceptions: true,
 			json: true,
 			maxsize: 5242880,

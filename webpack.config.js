@@ -55,22 +55,12 @@ module.exports = {
 					test: /[\\/]node_modules[\\/]jquery[\\/]/,
 					name: "jquery_vendor",
 					chunks: 'all'
-				},
-				anime_vendor: {
-					test: /[\\/]node_modules[\\/]animejs[\\/]/,
-					name: "anime_vendor",
-					chunks: 'all'
-				},
-				lodash_vendor: {
-					test: /[\\/]node_modules[\\/]lodash[\\/]/,
-					name: "lodash_vendor",
-					chunks: 'all'
-				}	
+				}
 			}
 		}
 	},
 	plugins: [
-		new CleanWebpackPlugin(['public/*', 'html/*', 'views/partials/links/*'], {}),
+		new CleanWebpackPlugin(['public', 'html', 'views/partials/links'], {}),
 		new webpack.ProvidePlugin({
 			_: 'lodash'
 		}),
