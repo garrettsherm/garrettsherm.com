@@ -10,7 +10,7 @@ const webpack = require('webpack');
 module.exports = {
 	entry: { 
 		index: './src/js/page/index.js', 
-		error: './src/js/page/error.js'
+		fourohfour: './src/js/page/fourohfour.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'public'),
@@ -73,8 +73,8 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
-			template: './src/html/error.html',
-			filename: '' + __dirname + '/html/error.html'
+			template: './src/ejs/pages/fourohfour.ejs',
+			filename: '' + __dirname + '/html/404.html'
 		}),
 		new MiniCssExtractPlugin({
 			filename: 'css/[name].[contenthash].css'

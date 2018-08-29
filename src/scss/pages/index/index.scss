@@ -1,7 +1,7 @@
-@import './reset.scss';
-@import './fonts.scss';
-@import './animations.scss';
-@import './buttons.scss';
+@import '../../modules/reset.scss';
+@import '../../modules/general.scss';
+@import '../../modules/animations.scss';
+@import '../../modules/buttons.scss';
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
 
@@ -37,6 +37,7 @@
 		height: 100%;
 		max-width: 400px;
 		max-height: 400px;
+		filter: drop-shadow(rgba(0,0,0,0.5) 5px 5px 5px);
 	}
 
 }
@@ -50,6 +51,8 @@
 	font-weight: 800;
 	padding-left: 15px;
 	padding-right: 15px;
+	margin-bottom: 5px;
+	filter: drop-shadow(rgba(0,0,0,0.5) 5px 5px 5px);
 
 	.word {
 		display: inline-block;
@@ -62,6 +65,8 @@
   font-weight: 300;
   font-size: 25px;
 	font-family: 'Ubuntu';
+	margin-bottom: 5px;
+	filter: drop-shadow(rgba(0,0,0,0.5) 5px 5px 5px);
 
 	.text-wrapper {
 	  position: relative;

@@ -11,16 +11,16 @@
 	cursor: pointer;
 	text-transform: uppercase;
 	display: inline-block;
+	color: #ffffff;
+	border-color: #ffffff;
+	transition: 0.25s;
+	filter: drop-shadow(rgba(0,0,0,0.5) 5px 5px 5px);
+
 
 	a {
 		text-decoration: none;
+		color: inherit;
 	}
-}
-
-.button-pulse {
-	color: white;
-	border-color: #ffffff;
-	transition: 0.25s;
 
 	&:hover, &:focus {
 		animation: pulse 1s;
@@ -30,9 +30,6 @@
 		color: #222222;
 	}
 
-	a {
-		color: inherit;
-	}
 }
 
 /* Button 1- Pulse Animation*/

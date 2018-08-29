@@ -10,7 +10,7 @@ import initialHomeResize from '../modules/initialHomeResize.js';
 import resizeMarginTopLogo from '../modules/onResizeHome.js';
 
 // Index page css
-import '../../scss/main.scss';
+import '../../scss/pages/index/index.scss';
 
 // Run on js load
 $(function(){

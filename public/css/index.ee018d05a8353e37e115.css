@@ -131,6 +131,28 @@ table {
   src: local("Ubuntu Bold"), local("Ubuntu-Bold"), url(/css/fonts/ubuntu-v12-latin-700.eot?#iefix) format("embedded-opentype"), url(/css/fonts/ubuntu-v12-latin-700.woff2) format("woff2"), url(/css/fonts/ubuntu-v12-latin-700.woff) format("woff"), url(/css/fonts/ubuntu-v12-latin-700.ttf) format("truetype"), url(/css/fonts/ubuntu-v12-latin-700.svg#Ubuntu) format("svg");
   /* Legacy iOS */ }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", "Open Sans";
+  font-weight: 800; }
+
+h1 {
+  font-size: 35px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 28px; }
+
+h4 {
+  font-size: 24px; }
+
+h5 {
+  font-size: 22px; }
+
+h6 {
+  font-size: 18px; }
+
 /* Animations */
 /* Gradient */
 /* For animated gradient background - homepage*/
@@ -186,14 +208,15 @@ table {
   padding: 15px 30px;
   cursor: pointer;
   text-transform: uppercase;
-  display: inline-block; }
-  .button-pulse a {
-    text-decoration: none; }
-
-.button-pulse {
-  color: white;
+  display: inline-block;
+  color: #ffffff;
   border-color: #ffffff;
-  transition: 0.25s; }
+  transition: 0.25s;
+  -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px);
+          filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px); }
+  .button-pulse a {
+    text-decoration: none;
+    color: inherit; }
   .button-pulse:hover, .button-pulse:focus {
     -webkit-animation: pulse 1s;
             animation: pulse 1s;
@@ -201,8 +224,6 @@ table {
     border-color: #ffffff;
     background-color: #ffffff;
     color: #222222; }
-  .button-pulse a {
-    color: inherit; }
 
 /* Button 1- Pulse Animation*/
 @-webkit-keyframes pulse {
@@ -243,7 +264,9 @@ table {
     width: 100%;
     height: 100%;
     max-width: 400px;
-    max-height: 400px; }
+    max-height: 400px;
+    -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px);
+            filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px); }
 
 /* 3: Name  */
 #name-animate {
@@ -253,7 +276,10 @@ table {
   font-family: 'Poppins';
   font-weight: 800;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  margin-bottom: 5px;
+  -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px);
+          filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px); }
   #name-animate .word {
     display: inline-block;
     line-height: 1em; }
@@ -262,7 +288,10 @@ table {
 #desc-animate {
   font-weight: 300;
   font-size: 25px;
-  font-family: 'Ubuntu'; }
+  font-family: 'Ubuntu';
+  margin-bottom: 5px;
+  -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px);
+          filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px); }
   #desc-animate .text-wrapper {
     position: relative;
     display: inline-block;
@@ -412,4 +441,4 @@ table {
     padding: 5px; } }
 
 
-/*# sourceMappingURL=index.d505343ec9765212d9be.css.map*/
+/*# sourceMappingURL=index.ee018d05a8353e37e115.css.map*/

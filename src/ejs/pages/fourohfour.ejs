@@ -1,0 +1,45 @@
+
+<% seoHeaders = require('./partials/header_seo_tags.ejs') %>
+<% 
+	seoOptions = {
+		title: '404 | Garrett Sherman',
+		desc: "Sorry that page could not be found"
+	} 
+%>
+
+<!DOCTYPE>
+<html>
+	<head>
+		<%= seoHeaders(seoOptions) %>
+		<link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.fourohfour.css %>">
+
+	</head>
+
+	<body>
+		<div id="social-icons-home">
+
+			<a href="https://www.linkedin.com/in/gsherm/" target="_blank">
+				<span class="social-icon-home">
+					<i class="fab fa-linkedin"></i>
+				</span>
+			</a>
+
+			<a href="https://www.github.com/garrettsherm/" target="_blank">
+				<span class="social-icon-home">
+					<i class="fab fa-github"></i>
+				</span>
+			</a>
+
+		</div>
+
+		<div class="gradient-bg full-height-width">
+			<div id="centered-container">
+				<div id="centered-content" class="text-center">
+					<h1 id="title-404">404</h1>
+					<p id="text-404">Sorry the page could not be found</p>
+				</div>
+			</div>	
+		</div>
+	</body>
+
+</html>

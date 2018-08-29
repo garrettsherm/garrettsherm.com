@@ -84,22 +84,22 @@ logger.debug('Routes ready')
 
 
 // 404 Middleware
-app.use(function(req, res) {
+app.use(function(req, res, next) {
 
   logger.info(`404 page hit by url "${req.url}"`);
 
 	res.status(404);
   // give template the url that caused 404
-  res.render('404', { url: `${req.url}` }, 
-  	function(error, html){
-   		// error rendering '404' template
-  		if(error){
-        logger.error(`Error rendering 404 template by url "${req.url}"`, { url: req.url })
-  			res.send('Can not find "404" template');
-  		}
-  		// no error send rendered template
-  		res.send(html);
-  	}
+  res.sendFile(
+    '404.html', 
+    {root: path.join(__dirname, './html')},
+    function(err){
+      if(err){
+        logger.error('Failed to send 404 page');
+        next(err);
+      }
+
+    }
   );
 });
 
