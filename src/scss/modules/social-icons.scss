@@ -1,0 +1,49 @@
+
+@import "../mixins/_responsive-mixins.scss";
+
+
+/* Social Icons in top bar*/
+#social-icons-home {
+	position: absolute;
+	z-index: 200;
+	width: 100%;
+	margin: 0;
+	top: 0;
+
+	a {
+		&:first-child {
+			padding-right: 20px;
+		}
+	}
+
+	.social-icon-home {
+		font-size: 30px;
+		color: #ffffff;
+		float: right;
+		padding: 10px;
+		-webkit-transition: all .25s ease-in;
+		-moz-transition: all .25s ease-in;
+		-ms-transition: all .25s ease-in;
+		-o-transition: all .25s ease-in;
+		transition: all .25s ease-in;
+
+		&:hover {
+			color: #222222;
+		}
+	}
+
+}
+
+/* Social Icons Responsive */
+#social-icons-home {
+
+	.social-icon-home {
+
+		@include for-width-small-5-under {
+			font-size: 22px;
+			padding: 5px;
+		}
+
+	}
+
+}

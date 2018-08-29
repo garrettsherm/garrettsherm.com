@@ -1,3 +1,6 @@
+
+@import "../mixins/_responsive-mixins.scss";
+
 /* Button 1 - Pulse Styles */
 .button-pulse {
 	font-family: 'Poppins';
@@ -40,4 +43,19 @@
 		background-color: #ffffff;
 		color: #000000;
 	}
+}
+
+/* Home Button Responsive */
+.button-pulse {
+	@include for-width-small-1-under {
+		border: 2px solid;
+		padding: 10px 20px;
+		font-size: 16px;
+	}
+
+	@include for-width-extra-small-only {
+		font-size: 14px;
+		padding: 5px 10px;
+	}
+
 }

@@ -10,75 +10,9 @@
 /* 7 - Home Button */
 /* 8 - Social Icons */
 
+@import "../../mixins/_responsive-mixins.scss";
 
-/* 1 - Variables */
-/* Random assortment of my commonly used breakpoints */
-$width--extra-small: 250px;
-$width--small-1: 300px;
-$width--small-2: 400px;
-$width--small-3: 500px;
-$width--small-4: 600px;
-$width--small-4-1: 800px;
-$width--small-5: 900px;
-$width--medium: 980px;
-$width--large-1: 1080px;
-$width--large-2: 1200px;
-$width--large-3: 1800px;
-
-$height--extra-small: 250px;
-$height--small-1: 350px;
-$height--small-2: 450px;
-$height--small-3: 550px;
-$height--small-4: 600px;
-$height--small-5: 700px;
-$height--large-1: 720px;
-$height--large-2: 780px;
-$height--large-3: 800px;
-$height--large-4: 1000px;
-
-
-
-
-/* 2 - Width mixins */
-@mixin for-width-extra-small-only {
-	@media (max-width: $width--extra-small){ @content; }
-}
-
-@mixin for-width-small-1-under {
-	@media (max-width: $width--small-1){ @content; }
-}
-
-@mixin for-width-small-2-under {
-	@media (max-width: $width--small-2){ @content; }
-}
-
-@mixin for-width-small-3-under {
-	@media (max-width: $width--small-3){ @content; }
-}
-
-@mixin for-width-small-4-under {
-	@media (max-width: $width--small-4){ @content; }
-}
-
-@mixin for-width-small-5-under {
-	@media (max-width: $width--small-5){ @content; }
-}
-
-@mixin for-width-large-2-under {
-	@media (max-width: $width--large-2){ @content; }
-}
-
-
-/* 3 - Height/Width mixins */
-@mixin for-small-phone-under {
-	@media (max-width: $width--small-1) and (max-height: $height--small-1){ @content; }
-}
-
-@mixin for-large-landscape-under {
-	@media (min-width: $width--extra-small) and (max-height: $height--small-4){ @content; }
-}
-
-/* 4 - Home SVG */
+/* Home SVG */
 #svgAttributes {
 	svg {
 
@@ -111,7 +45,7 @@ $height--large-4: 1000px;
 	}
 }
 
-/* 5 - Home Title Text */
+/* Home Title Text */
 #name-animate {
 
 	@include for-width-small-1-under{
@@ -124,7 +58,7 @@ $height--large-4: 1000px;
 
 }
 
-/* 6 - Home Description */
+/* Home Description */
 #desc-animate {
 
 	@include for-width-small-1-under {
@@ -133,35 +67,6 @@ $height--large-4: 1000px;
 
 	@include for-width-extra-small-only {
 		font-size: 14px;
-	}
-
-}
-
-/* 7 - Home Button */
-.button-pulse {
-	@include for-width-small-1-under {
-		border: 2px solid;
-		padding: 10px 20px;
-		font-size: 16px;
-	}
-
-	@include for-width-extra-small-only {
-		font-size: 14px;
-		padding: 5px 10px;
-	}
-
-}
-
-/* 8 - Social Icons */
-#social-icons-home {
-
-	.social-icon-home {
-
-		@include for-width-small-5-under {
-			font-size: 22px;
-			padding: 5px;
-		}
-
 	}
 
 }

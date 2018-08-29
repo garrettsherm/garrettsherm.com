@@ -1,3 +1,4 @@
+
 // Node Modules
 import $ from 'jquery';
 
@@ -10,6 +11,12 @@ import initialHomeResize from '../modules/initialHomeResize.js';
 import resizeMarginTopLogo from '../modules/onResizeHome.js';
 
 // Index page css
+import '../../scss/modules/reset.scss';
+import '../../scss/modules/general.scss';
+import '../../scss/modules/buttons.scss';
+import '../../scss/modules/gradient-bg.scss';
+import '../../scss/modules/social-icons.scss';
+import '../../scss/modules/spinner-overlay.scss';
 import '../../scss/pages/index/index.scss';
 
 // Run on js load

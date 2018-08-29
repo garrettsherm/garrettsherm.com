@@ -32,3 +32,27 @@ h5 {
 h6 {
 	font-size: 18px;
 }
+
+/* General utility classes */
+
+.full-height-width {
+	height: 100%;
+	width: 100%;
+	min-width: 100%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.centered-container {
+	postion: relative;
+	
+	.centered-content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+}
