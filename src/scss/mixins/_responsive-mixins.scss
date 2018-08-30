@@ -26,7 +26,7 @@ $height--large-4: 1000px;
 
 
 
-/* 2 - Width mixins */
+/* Width mixins */
 @mixin for-width-extra-small-only {
 	@media (max-width: $width--extra-small){ @content; }
 }
