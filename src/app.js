@@ -12,6 +12,8 @@ const indexRouter = require('./routes/index');
 // Express Application
 const app = express();
 
+//Disable x-powered-by header for security
+app.disable('x-powered-by');
 
 // winston logger
 const logger = require('./utils/logger');
