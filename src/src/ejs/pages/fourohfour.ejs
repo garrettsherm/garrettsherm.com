@@ -1,5 +1,7 @@
 
-<% seoHeaders = require('./partials/header_seo_tags.ejs') %>
+<% seoHeaders = require('./partials/head_seo_tags.ejs') %>
+<% cdnLinks= require('./partials/head_cdn_links.ejs') %>
+
 <% 
 	seoOptions = {
 		title: '404 | Garrett Sherman',
@@ -11,6 +13,8 @@
 <html>
 	<head>
 		<%= seoHeaders(seoOptions) %>
+		<%= cdnLinks() %>
+
 		<link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.fourohfour.css %>">
 
 	</head>
@@ -20,13 +24,13 @@
 
 			<a href="https://www.linkedin.com/in/gsherm/" target="_blank">
 				<span class="social-icon-home">
-					<i class="fab fa-linkedin"></i>
+					<i class="fa fa-linkedin"></i>
 				</span>
 			</a>
 
 			<a href="https://www.github.com/garrettsherm/" target="_blank">
 				<span class="social-icon-home">
-					<i class="fab fa-github"></i>
+					<i class="fa fa-github"></i>
 				</span>
 			</a>
 

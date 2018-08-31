@@ -1,6 +1,8 @@
 <% svgBlank = require('./partials/svg_blank.ejs') %>
 <% svgDiagonal = require('./partials/svg_diagonal.ejs') %>
-<% seoHeaders = require('./partials/header_seo_tags.ejs') %>
+<% seoTags= require('./partials/head_seo_tags.ejs') %>
+<% cdnLinks= require('./partials/head_cdn_links.ejs') %>
+
 <% 
 	seoOptions = {
 		title: 'Garrett Sherman | Full Stack Developer',
@@ -10,7 +12,8 @@
 <!DOCTYPE>
 <html>
 	<head>
-		<%= seoHeaders(seoOptions) %>
+		<%= seoTags(seoOptions) %>
+		<%= cdnLinks() %>
 		<link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.index.css %>">
 	</head>
 	<body>
@@ -24,14 +27,14 @@
 
 			<a href="https://www.linkedin.com/in/gsherm/" target="_blank">
 				<span class="social-icon-home">
-					<i class="fab fa-linkedin"></i>
+					<i class="fa fa-linkedin"></i>
 				</span>
 			</a>
 
 
 			<a href="https://www.github.com/garrettsherm/" target="_blank">
 				<span class="social-icon-home">
-					<i class="fab fa-github"></i>
+					<i class="fa fa-github"></i>
 				</span>
 			</a>
 
@@ -71,8 +74,8 @@
 
 				</div>
 		</div>
-
-		<script src="<%= htmlWebpackPlugin.files.chunks.jquery_vendor.entry %>"></script>
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
 	
 		</body>

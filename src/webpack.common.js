@@ -17,6 +17,9 @@ module.exports = {
 		publicPath: '/',
 		filename: 'js/[name].[chunkhash].js'
 	},
+	externals:{
+		jquery: 'jQuery'
+	},
 	module: {
 		rules: [
 			{
@@ -47,17 +50,6 @@ module.exports = {
 				loader: 'ejs-loader'
 			}
 		]
-	},
-	optimization: {
-		splitChunks: {
-			cacheGroups: {
-				jquery_vendor: {
-					test: /[\\/]node_modules[\\/]jquery[\\/]/,
-					name: "jquery_vendor",
-					chunks: 'all'
-				}
-			}
-		}
 	},
 	plugins: [
 		new CleanWebpackPlugin(['public', 'html', 'views/partials/links'], {}),

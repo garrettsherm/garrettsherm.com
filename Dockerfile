@@ -2,6 +2,7 @@ FROM keymetrics/pm2:latest-alpine
 
 COPY src .
 COPY pm2.json .
+RUN rm -rf node_modules
 
 ENV NPM_CONFIG_LOGLEVEL warn
 RUN npm install
