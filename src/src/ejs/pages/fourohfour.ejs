@@ -1,6 +1,7 @@
 
 <% seoHeaders = require('./partials/head_seo_tags.ejs') %>
-<% cdnLinks= require('./partials/head_cdn_links.ejs') %>
+<% cdnLinks = require('./partials/head_cdn_links.ejs') %>
+<% topbarIcons= require('./partials/topbar_social_icons.ejs') %>
 
 <% 
 	seoOptions = {
@@ -20,21 +21,8 @@
 	</head>
 
 	<body>
-		<div id="social-icons-home">
 
-			<a href="https://www.linkedin.com/in/gsherm/" target="_blank">
-				<span class="social-icon-home">
-					<i class="fa fa-linkedin"></i>
-				</span>
-			</a>
-
-			<a href="https://www.github.com/garrettsherm/" target="_blank">
-				<span class="social-icon-home">
-					<i class="fa fa-github"></i>
-				</span>
-			</a>
-
-		</div>
+		<%= topbarIcons() %>
 
 		<div class="gradient-bg full-height-width">
 			<div class="centered-container">

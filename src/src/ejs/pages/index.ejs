@@ -2,6 +2,7 @@
 <% svgDiagonal = require('./partials/svg_diagonal.ejs') %>
 <% seoTags= require('./partials/head_seo_tags.ejs') %>
 <% cdnLinks= require('./partials/head_cdn_links.ejs') %>
+<% topbarIcons= require('./partials/topbar_social_icons.ejs') %>
 
 <% 
 	seoOptions = {
@@ -23,22 +24,7 @@
 			</div>
 		</div>
 
-		<div id="social-icons-home">
-
-			<a href="https://www.linkedin.com/in/gsherm/" target="_blank">
-				<span class="social-icon-home">
-					<i class="fa fa-linkedin"></i>
-				</span>
-			</a>
-
-
-			<a href="https://www.github.com/garrettsherm/" target="_blank">
-				<span class="social-icon-home">
-					<i class="fa fa-github"></i>
-				</span>
-			</a>
-
-		</div>
+		<%= topbarIcons() %>
 
 		<div class="gradient-bg full-height-width">
 				<div id="home-container" class="text-center">
@@ -74,8 +60,8 @@
 
 				</div>
 		</div>
-	
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js" integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4=" crossorigin="anonymous"></script> 
 		<script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
 	
 		</body>

@@ -115,7 +115,7 @@ app.use(function(err, req, res, next) {
 
   logger.error(`Error occured at url "${req.url}"`, { errorMsg: err.message, errorStatus: err.status, url: req.url });
 
-  res.status(err.status || 500);
+  res.status(500);
   res.render('error', 
   	function(error, html){
   		// error rendering 'error' template

@@ -18,7 +18,8 @@ module.exports = {
 		filename: 'js/[name].[chunkhash].js'
 	},
 	externals:{
-		jquery: 'jQuery'
+		jquery: 'jQuery',
+		animejs: 'anime'
 	},
 	module: {
 		rules: [
