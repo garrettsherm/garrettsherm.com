@@ -1,49 +1,84 @@
 
 @import "../mixins/_responsive-mixins.scss";
 
+.social-icon-all {
+	filter: drop-shadow(rgba(0,0,0,0.5) 2px 2px 5px);
+	color: #ffffff;
+	margin: 5px;
+	-webkit-transition: all .25s ease-in;
+	-moz-transition: all .25s ease-in;
+	-ms-transition: all .25s ease-in;
+	-o-transition: all .25s ease-in;
+	transition: all .25s ease-in;
 
-/* Social Icons in top bar*/
-#social-icons-home {
-	position: absolute;
-	z-index: 200;
-	width: 100%;
-	margin: 0;
-	top: 0;
-
-	a {
-		&:first-child {
-			padding-right: 20px;
-		}
+	&:hover {
+		filter: drop-shadow(rgba(0,0,0,0.5) 0px 8px 10px);
 	}
-
-	.social-icon-home {
-		font-size: 26px;
-		color: #ffffff;
-		float: right;
-		padding: 5px;
-		-webkit-transition: all .25s ease-in;
-		-moz-transition: all .25s ease-in;
-		-ms-transition: all .25s ease-in;
-		-o-transition: all .25s ease-in;
-		transition: all .25s ease-in;
-
-		&:hover {
-			color: #222222;
-		}
-	}
-
 }
 
-/* Social Icons Responsive */
-#social-icons-home {
 
-	.social-icon-home {
+/* Social Icons in top bar*/
+#topbar-icons {
+	width: 100%;
+	position: absolute;
 
-		@include for-width-small-4-under {
-			font-size: 22px;
-			padding: 5px;
+	#social-icons-all {
+		float: right;
+		z-index: 200;
+		top: 0;
+
+		.social-icon-container {
+			display:inline-block;
+			margin-top: 5px;
+
+			&:last-child {
+				margin-right: 15px;
+			}
+
+			.social-icon-all {
+				font-size: 26px;
+
+				&:hover {
+					color: #8E221D;
+				}
+			}
+		}
+	}
+}
+
+/* Social Icons topbar  Responsive */
+#topbar-icons {
+
+	#social-icons-all {
+
+		.social-icon-all {
+
+			@include for-width-small-4-under {
+				font-size: 22px;
+			}
+
 		}
 
 	}
+}
 
+/* Social Icons on contact page*/
+#social-icons-contact {
+
+	.social-icon-container {
+		display:inline-block;
+	}
+
+	#social-icons-all {
+		margin: 10px;
+
+		.social-icon-all {
+			font-size: 50px;
+
+			&:hover {
+				color: #8E221D;
+			}
+		}
+
+	}
 }

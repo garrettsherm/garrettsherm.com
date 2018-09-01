@@ -1,0 +1,36 @@
+<% svgBlank = require('./partials/svg_blank.ejs') %>
+<% svgDiagonal = require('./partials/svg_diagonal.ejs') %>
+<% seoTags= require('./partials/head_seo_tags.ejs') %>
+<% cdnLinks= require('./partials/head_cdn_links.ejs') %>
+<% socialIcons= require('./partials/social_icons.ejs') %>
+
+<% 
+	seoOptions = {
+		title: 'Contact | Garrett Sherman',
+		desc: "Looking for web dev services? The rest will go here"
+	} 
+%>
+<!DOCTYPE>
+<html>
+	<head>
+		<%= seoTags(seoOptions) %>
+		<%= cdnLinks() %>
+		<link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.contact.css %>">
+	</head>
+	<body>
+		
+		<div class="gradient-bg full-height-width">
+			<div class="centered-container">
+				<div class="text-center centered-content">
+					<h1 id="title-contact">Let's Chat</h1>
+					<div id="social-icons-contact">
+						<%= socialIcons() %>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<script src="<%= htmlWebpackPlugin.files.chunks.contact.entry %>"></script>
+	
+		</body>
+</html>

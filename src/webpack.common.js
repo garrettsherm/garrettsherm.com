@@ -6,11 +6,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: { 
 		index: './src/js/page/index.js', 
-		fourohfour: './src/js/page/fourohfour.js'
+		fourohfour: './src/js/page/fourohfour.js',
+		contact: './src/js/page/contact.js',
+		projects: './src/js/page/projects.js',
+		about: './src/js/page/about.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'public'),
@@ -53,7 +57,7 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new CleanWebpackPlugin(['public', 'html', 'views/partials/links'], {}),
+		new CleanWebpackPlugin(['public/css', 'public/js', 'html', 'views/partials/links'], {}),
 		new webpack.ProvidePlugin({
 			_: 'lodash'
 		}),
@@ -69,6 +73,42 @@ module.exports = {
 			template: './src/ejs/pages/fourohfour.ejs',
 			filename: '' + __dirname + '/html/404.html'
 		}),
+		new HtmlWebpackPlugin({
+			inject: false,
+			hash: true,
+			template: './src/ejs/pages/contact.ejs',
+			filename: '' + __dirname + '/html/contact.html'
+		}),
+		new HtmlWebpackPlugin({
+			inject: false,
+			hash: true,
+			template: './src/ejs/links/projects-js.ejs',
+			filename: '' + __dirname + '/views/partials/links/projects-js.ejs'
+		}),
+		new HtmlWebpackPlugin({
+			inject: false,
+			hash: true,
+			template: './src/ejs/links/projects-css.ejs',
+			filename: '' + __dirname + '/views/partials/links/projects-css.ejs'
+		}),
+		new HtmlWebpackPlugin({
+			inject: false,
+			hash: true,
+			template: './src/ejs/links/about-js.ejs',
+			filename: '' + __dirname + '/views/partials/links/about-js.ejs'
+		}),
+		new HtmlWebpackPlugin({
+			inject: false,
+			hash: true,
+			template: './src/ejs/links/about-css.ejs',
+			filename: '' + __dirname + '/views/partials/links/about-css.ejs'
+		}),
+		new CopyWebpackPlugin(
+			[
+				{ from: 'src/ejs/pages/partials', to: '../views/partials' }
+			],
+			{}
+		),
 		new MiniCssExtractPlugin({
 			filename: 'css/[name].[contenthash].css'
 		}),

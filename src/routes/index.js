@@ -31,15 +31,16 @@ router.get('/about', function(req, res, next) {
 });
 
 router.get('/projects', function(req, res, next) {
-  res.sendFile(
-  	'projects.html', 
-  	{root: path.join(__dirname, '../html')},
-  	function(err){
- 			if(err){
- 				logger.error('Failed to send projects page');
-  			next(err);
-  		}
-  	}
+  res.render('projects', 
+    function(error, html){
+      // error rendering 'error' template
+      if(error){
+        logger.error('Error rendering projects template"');
+        next(error);
+      }
+      // no error send rendered template
+      res.send(html);
+    }
   );
 });
 
