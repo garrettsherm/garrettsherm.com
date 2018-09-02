@@ -1,0 +1,178 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", "Open Sans", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase; }
+
+p {
+  font-family: "Open Sans", sans-serif; }
+
+h1 {
+  font-size: 35px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 28px; }
+
+h4 {
+  font-size: 24px; }
+
+h5 {
+  font-size: 22px; }
+
+h6 {
+  font-size: 18px; }
+
+/* General utility classes */
+.full-height-width {
+  height: 100%;
+  width: 100%;
+  min-width: 100%; }
+
+.text-center {
+  text-align: center; }
+
+.centered-container {
+  postion: relative; }
+  .centered-container .centered-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+
+/* Gradient background */
+.gradient-bg {
+  color: #fff;
+  background: linear-gradient(-45deg, #3775B0, #C19BD1, #6EC4DB, #86C6D1);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 30s ease infinite;
+  animation: Gradient 30s ease infinite; }
+
+/* For animated gradient background */
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+/* Variables */
+/* Random assortment of my commonly used breakpoints */
+/* Width mixins */
+/* 3 - Height/Width mixins */
+.social-icon-all {
+  -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 2px 2px 5px);
+          filter: drop-shadow(rgba(0, 0, 0, 0.5) 2px 2px 5px);
+  color: #ffffff;
+  margin: 5px; }
+  .social-icon-all:hover {
+    -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 8px 10px);
+            filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 8px 10px); }
+
+/* Social Icons in top bar*/
+#topbar-icons {
+  width: 100%;
+  position: absolute; }
+  #topbar-icons #social-icons-all {
+    float: right;
+    z-index: 200;
+    top: 0; }
+    #topbar-icons #social-icons-all .social-icon-container {
+      display: inline-block;
+      margin-top: 5px; }
+      #topbar-icons #social-icons-all .social-icon-container:last-child {
+        margin-right: 15px; }
+      #topbar-icons #social-icons-all .social-icon-container .social-icon-all {
+        font-size: 26px; }
+        #topbar-icons #social-icons-all .social-icon-container .social-icon-all:hover {
+          color: #8E221D; }
+
+/* Social Icons topbar  Responsive */
+@media (max-width: 600px) {
+  #topbar-icons #social-icons-all .social-icon-all {
+    font-size: 22px; } }
+
+/* Social Icons on contact page*/
+#social-icons-contact .social-icon-container {
+  display: inline-block; }
+
+#social-icons-contact #social-icons-all {
+  margin: 10px; }
+  #social-icons-contact #social-icons-all .social-icon-all {
+    font-size: 50px; }
+    #social-icons-contact #social-icons-all .social-icon-all:hover {
+      color: #8E221D; }
+
+/* scss for 404 page */
+#title-404 {
+  margin: 10px;
+  font-size: 50px;
+  -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px);
+          filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px); }
+
+#text-404 {
+  margin: 10px;
+  font-size: 16px;
+  -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px);
+          filter: drop-shadow(rgba(0, 0, 0, 0.5) 5px 5px 5px); }
+
+
+/*# sourceMappingURL=fourohfour.82d951e6b0b3c5d08392.css.map*/
