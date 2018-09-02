@@ -6,6 +6,7 @@ import $ from 'jquery';
 import debounce from 'lodash.debounce';
 
 // Animation functions for homepage
+import addOverlayMenuClick from '../modules/overlayMenu';
 import callLogoTimeline from '../modules/animeTimelines.js';
 import initialHomeResize from '../modules/initialHomeResize.js';
 import resizeMarginTopLogo from '../modules/onResizeHome.js';
@@ -17,10 +18,13 @@ import '../../scss/modules/buttons.scss';
 import '../../scss/modules/gradient-bg.scss';
 import '../../scss/modules/social-icons.scss';
 import '../../scss/modules/spinner-overlay.scss';
+import '../../scss/modules/overlay-menu.scss';
 import '../../scss/pages/index/index.scss';
 
 // Run on js load
 $(function(){
+
+	addOverlayMenuClick();
 
 	// Initial center of logo svg
 	initialHomeResize();

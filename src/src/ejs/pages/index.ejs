@@ -3,7 +3,8 @@
 <% seoTags= require('./partials/head_seo_tags.ejs') %>
 <% cdnLinks= require('./partials/head_cdn_links.ejs') %>
 <% socialIcons= require('./partials/social_icons.ejs') %>
-
+<% menuIcon= require('./partials/top_menu_icon.ejs') %>
+<% overlayMenu= require('./partials/header_menu.ejs') %>
 <% 
 	seoOptions = {
 		title: 'Garrett Sherman | Full Stack Developer',
@@ -25,8 +26,12 @@
 		</div>
 
 		<div id="topbar-icons">
+			<%= menuIcon() %>
 			<%= socialIcons() %>
 		</div>
+
+		<%= overlayMenu() %>
+
 
 		<div class="gradient-bg full-height-width">
 				<div id="home-container" class="text-center">

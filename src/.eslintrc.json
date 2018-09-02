@@ -1,4 +1,9 @@
 {
+    "globals":{
+        "__dirname": true,
+        "process": true,
+        "console": true
+    },
     "env": {
         "browser": true,
         "commonjs": true,

@@ -1,5 +1,4 @@
 // Node Modules
-const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
@@ -106,26 +105,26 @@ app.use(function(req, res, next) {
 });
 
 // Error Middleware
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res) {
   // variables to be used in ejs template
   // if development attach error message, otherwise string 'Error'
   res.locals.message =  process.env.NODE_ENV === 'development' ? err.message : 'Error';
   // if development attach error object, otherwise nothing
- 	res.locals.error = process.env.NODE_ENV === 'development' ? err : {};
+  res.locals.error = process.env.NODE_ENV === 'development' ? err : {};
 
   logger.error(`Error occured at url "${req.url}"`, { errorMsg: err.message, errorStatus: err.status, url: req.url });
 
   res.status(500);
   res.render('error', 
-  	function(error, html){
-  		// error rendering 'error' template
-  		if(error){
+    function(error, html){
+    // error rendering 'error' template
+      if(error){
         logger.error(`Error rendering error template by url "${req.url}"`)
-  			res.send('Error rendering "Error" template');
-  		}
-  		// no error send rendered template
-  		res.send(html);
-  	}
+        res.send('Error rendering "Error" template');
+      }
+      // no error send rendered template
+      res.send(html);
+    }
   );
 });
 

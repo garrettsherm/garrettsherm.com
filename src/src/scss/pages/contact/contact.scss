@@ -3,3 +3,24 @@
 	filter: drop-shadow(rgba(0,0,0,0.5) 5px 5px 5px);	
 	margin-bottom: 15px;
 }
+
+/* Social Icons on contact page*/
+#social-icons-contact {
+
+	.social-icon-container {
+		display:inline-block;
+	}
+
+	#social-icons-all {
+		margin: 10px;
+
+		.social-icon-all {
+			font-size: 50px;
+
+			&:hover {
+				color: #8E221D;
+			}
+		}
+
+	}
+}

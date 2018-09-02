@@ -3,7 +3,8 @@
 <% seoTags= require('./partials/head_seo_tags.ejs') %>
 <% cdnLinks= require('./partials/head_cdn_links.ejs') %>
 <% socialIcons= require('./partials/social_icons.ejs') %>
-
+<% menuIcon= require('./partials/top_menu_icon.ejs') %>
+<% overlayMenu= require('./partials/header_menu.ejs') %>
 <% 
 	seoOptions = {
 		title: 'Contact | Garrett Sherman',
@@ -19,6 +20,13 @@
 	</head>
 	<body>
 		
+		<div id="topbar-icons">
+			<%= menuIcon() %>
+		</div>
+
+		<%= overlayMenu() %>
+
+
 		<div class="gradient-bg full-height-width">
 			<div class="centered-container">
 				<div class="text-center centered-content">

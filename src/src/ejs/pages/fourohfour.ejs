@@ -2,6 +2,8 @@
 <% seoHeaders = require('./partials/head_seo_tags.ejs') %>
 <% cdnLinks = require('./partials/head_cdn_links.ejs') %>
 <% socialIcons= require('./partials/social_icons.ejs') %>
+<% menuIcon= require('./partials/top_menu_icon.ejs') %>
+<% overlayMenu= require('./partials/header_menu.ejs') %>
 
 <% 
 	seoOptions = {
@@ -22,8 +24,12 @@
 
 	<body>
 		<div id="topbar-icons">
+			<%= menuIcon() %>
 			<%= socialIcons() %>
 		</div>
+
+		<%= overlayMenu() %>
+
 		<div class="gradient-bg full-height-width">
 			<div class="centered-container">
 				<div class="text-center centered-content">
@@ -32,6 +38,9 @@
 				</div>
 			</div>	
 		</div>
+
+		<script src="<%= htmlWebpackPlugin.files.chunks.fourohfour.entry %>"></script>
+
 	</body>
 
 </html>
