@@ -1,3 +1,83 @@
-p {
-	color: red;
+@import "~bootstrap/dist/css/bootstrap-grid.min.css";
+
+#projects-bg {
+	width:100%;
+	min-height:100%;
+	background-color: #3775B0;
+	padding: 10px;
 }
+
+#projects-container {
+
+	padding-top: 50px;
+}
+
+.row-projects {
+	margin: 20px 0;
+}
+
+#projects-title {
+	margin: 20px 0;
+
+	h1 {
+		color: #ffffff;
+		filter: drop-shadow(rgba(0,0,0,0.5) 5px 5px 5px);	
+	}
+}
+
+.project-container {
+	margin-top: 20px;
+}
+
+.project-card {
+	padding: 20px;
+	background: #ffffff;
+	height: 100%;
+	box-shadow: 0 15px 6px -6px rgba(0, 0, 0, 0.8);
+
+	p {
+		font-family: "Open Sans", sans serif;
+	}
+
+	img {
+		max-width: 100%;
+		border: 2px solid rgba(0, 0, 0, 0.8);
+		box-shadow: 5px 5px rgba(0, 0, 0, 0.8);
+
+		&:hover {
+			border: 2px solid rgba(0, 0, 0, 0.8);
+			box-shadow: 5px 5px #8E221D;
+		}
+	}
+
+	.project-card-title {
+		margin: 20px 0;
+		font-size: 26px;
+
+		a {
+			text-decoration: none;
+			color: #222222;
+
+			&:hover {
+				color: #8E221D;
+			}
+		}
+	}
+
+	.icon-go-container {
+		margin-top: 10px;
+
+		i {
+			color: #222222;
+			font-size: 22px;
+
+			&:hover {
+				color: #8E221D;
+			}
+		}
+	}
+
+}
+
+/* Bottom: Responsive Design */
+@import './projects_responsive.scss';

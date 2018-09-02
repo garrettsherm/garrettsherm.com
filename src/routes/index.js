@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const logger = require('../utils/logger')
+const logger = require('../utils/logger');
+const testjson = require('../utils/data/projects.json');
 
 router.get('/', function(req, res, next) {
   res.sendFile(
@@ -31,7 +32,7 @@ router.get('/about', function(req, res, next) {
 });
 
 router.get('/projects', function(req, res, next) {
-  res.render('projects', 
+  res.render('projects', {projects: testjson},
     function(error, html){
       // error rendering 'error' template
       if(error){

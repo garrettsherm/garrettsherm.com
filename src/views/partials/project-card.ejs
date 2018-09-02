@@ -1,0 +1,26 @@
+<% if(i === 0 || (i % 3) === 0) { %>
+	<div class="row row-projects">
+<% } %>
+<div class="col-md-4 text-center project-container">
+	<div class="project-card col-md-12">
+		<a href="<%- project.link %>" target="_blank">
+			<img src="<%= project.image %>" alt="Marbella Hair Lab Image">
+		</a>
+		<h2 class="project-card-title">
+			<a href="<%- project.link %>" target="_blank">
+				<%= project.title %>
+			</a>
+		</h2>
+		<p><%= project.desc %></p>
+		<div class="icon-go-container">
+			<a href="<%- project.link %>" target="_blank">
+				<span class="icon-go">
+					<i class="fa fa-angle-double-right"></i>
+				</span>
+			</a>
+		</div>
+	</div>
+</div>
+<% if(i != 0 && ((i + 1) % 3) === 0) { %>
+	</div>
+<% } %>

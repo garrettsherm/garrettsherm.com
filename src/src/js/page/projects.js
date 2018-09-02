@@ -1,4 +1,6 @@
-// Index page css
+
+
+// projects page css
 import '../../scss/modules/reset.scss';
 import '../../scss/modules/general.scss';
 import '../../scss/modules/buttons.scss';

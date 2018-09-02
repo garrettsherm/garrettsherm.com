@@ -7,14 +7,35 @@
 <!DOCTYPE>
 <html>
 	<head>
+		<%- include('partials/head_seo_tags', seoOptions) %>		
+		<%- include('partials/head_cdn_links') %>
+		<%- include('partials/links/projects-css') %>
 	</head>
 	<body>
-		<p>projects</p>
-
-		<%- include('partials/svg_diagonal') %>
+		<div id="topbar-icons">
+			<%- include('partials/social_icons') %>
+		</div>
 		
+		<div id="projects-bg">
+			<div id="projects-container" class="container">
 
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js" integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4=" crossorigin="anonymous"></script> 	
-		</body>
+				<div id="projects-title" class="row">
+					<div class="col-md-12 text-center">
+						<h1>Some of My Work</h1>
+					</div>
+				</div>
+
+				<% projects.forEach(function(project, i){ %>
+					<%- include('partials/project-card', {project: project, i: i}) %>
+				<% }); %>					
+
+			</div>
+		</div>
+		
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js" integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4=" crossorigin="anonymous"></script> 	
+		<%- include('partials/links/projects-js') %>
+
+	</body>
 </html>

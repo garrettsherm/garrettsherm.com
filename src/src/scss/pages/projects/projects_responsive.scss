@@ -1,0 +1,10 @@
+@import "../../mixins/_responsive-mixins.scss";
+
+.project-card {
+
+	.project-card-title {
+		@include for-width-large-1-under {
+			font-size: 22px;
+		}
+	}
+}

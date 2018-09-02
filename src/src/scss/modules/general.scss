@@ -1,6 +1,6 @@
 
-$header-font: 'Poppins', sans-serif;
-$backup-font: 'Open Sans';
+$header-font: 'Poppins';
+$backup-font: 'Open Sans', sans-serif;
 $header-font-weight: 800;
 
 h1, h2, h3, h4, h5, h6 {
@@ -9,6 +9,9 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
+p {
+	font-family: $backup-font;
+}
 
 h1 {
 	font-size: 35px;

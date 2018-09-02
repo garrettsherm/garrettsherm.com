@@ -1,0 +1,62 @@
+[
+	{
+		"title": "Marbella Hair Lab",
+		"desc": "Website built for Marbella Hair Lab. Hair salon located at Highway 401 & Young St (Toronto, ON Canada).",
+		"image": "/images/project-marbella.png",
+		"link": "https://marbellahairlab.com"
+	},
+	{
+		"title": "FXtrademark",
+		"desc": "E-commerce website built for FXtrademark. Get a premium e-book to learn forex trading.",
+		"image": "/images/project-fxtrademark.png",
+		"link": "https://www.fxtrademark.com"
+	},
+	{
+		"title": "Chef On The Go",
+		"desc": "Website built for Chef On The Go. Catering services for Toronto & the GTA.",
+		"image": "/images/project-chefonthego.png",
+		"link": "http://www.chefonthego.ca"
+	},
+	{
+		"title": "Nannies Inc",
+		"desc": "Website built for Nannies Inc. Providing nanny services to Canadian families.",
+		"image": "/images/project-chefonthego.png",
+		"link": "https://nanniesinc.ca"
+	},
+	{
+		"title": "Mina Majesty",
+		"desc": "Website built for Mina Majesty. Providing personal beauty services for Toronto & the GTA.",
+		"image": "/images/project-minamajesty.png",
+		"link": "http://www.minamajesty.com"
+	},
+	{
+		"title": "No Dirt Left Behind",
+		"desc": "Website built for No Dirt Left Behind. Providing window cleaning & other home services to Toronto & the GTA.",
+		"image": "/images/project-nodirtleftbehind.png",
+		"link": "http://www.nodirtleftbehind.com"
+	},
+	{
+		"title": "How You Being",
+		"desc": "Website built for the How You Being. Providing life coaching services to Toronto & the GTA.",
+		"image": "/images/project-howyoubeing.png",
+		"link": "http://www.howyoubeing.com/home/"
+	},
+	{
+		"title": "Newmark Home Inspections",
+		"desc": "Website built for Newmark Home Inspections. Providing home inspection services to Toronto & the GTA.",
+		"image": "/images/project-newmarkhomeinspections.png",
+		"link": "http://www.newmarkhomeinspections.ca"
+	},
+	{
+		"title": "Allwon Media",
+		"desc": "Blog built for Allwon Media. Music & lifestyle blog.",
+		"image": "/images/project-allwonmedia.png",
+		"link": "http://allwonmedia.com"
+	},
+	{
+		"title": "Beaux Bijoux",
+		"desc": "E-commerce website built for Beaux Bijoux. Hand crafted jewelry.",
+		"image": "/images/project-beauxbijoux.png",
+		"link": "https://beauxbijoux.ca"
+	}
+]

@@ -9,7 +9,7 @@
     "build-dev": "webpack --config webpack.dev.js",
     "build-dev-watch": "webpack --config webpack.dev.js --watch",
     "build-prod": "webpack --config webpack.prod.js",
-    "dev": "nodemon ./start.js",
+    "dev": "nodemon -L ./start.js",
     "dev-build": "npm run build-dev && npm run dev",
     "dev-build-watch": "npm run build-dev-watch & npm run dev",
     "start": "npm run build-prod && node ./start.js",

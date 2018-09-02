@@ -1,10 +1,10 @@
 {
-	"verbose": false,
+	"verbose": true,
 	"ignore": [
-		"src/*", 
-		"public/*", 
-		"views/*",
-		"html/*",
-		"logs/*"
+		"src", 
+		"public", 
+		"views",
+		"html",
+		"logs"
 	]
 }

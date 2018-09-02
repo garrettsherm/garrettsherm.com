@@ -51,6 +51,11 @@ $height--large-4: 1000px;
 	@media (max-width: $width--small-5){ @content; }
 }
 
+
+@mixin for-width-large-1-under {
+	@media (max-width: $width--large-1){ @content; }
+}
+
 @mixin for-width-large-2-under {
 	@media (max-width: $width--large-2){ @content; }
 }
