@@ -60,4 +60,9 @@ router.get('/contact', function(req, res, next) {
   );
 });
 
+
+router.get('/error', function(req, res, next) {
+  res.sendFile('./inde.html');
+});
+
 module.exports = router;

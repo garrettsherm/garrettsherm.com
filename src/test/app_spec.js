@@ -71,4 +71,16 @@ describe('App', function(){
 		});
 	});
 
+	//test get request to error 
+	describe('visit page that returns an error', function(){
+		it('responds with status 500', function(done){
+			chai.request(app)
+				.get('/error')
+				.end(function(err, res){
+					expect(res).to.have.status(500);
+					done();
+				});
+		});
+	});
+
 });

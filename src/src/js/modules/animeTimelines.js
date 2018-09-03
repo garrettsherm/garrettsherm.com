@@ -15,7 +15,7 @@ export default function callLogoTimeline(){
 	// Ensure that name, description, and button are not visible
 	$('#name-animate').css('opacity', '0');
 	$('#desc-animate').css('opacity', '0');
-	$('#button-animate').css('opacity', '0');
+	$('.button-pulse').css('opacity', '0');
 
 	// credit to Tobias Ahlin (http://tobiasahlin.com/moving-letters/) effect 11
 	// Used to wrap each letter in description in span for typing effect
@@ -37,7 +37,8 @@ export default function callLogoTimeline(){
 			height: 100,
 			easing: 'easeInOutSine',
 			direction: 'alternate',
-			duration: 500
+			duration: 700,
+			delay: 1200
 		})
 		// Draw rectangle 2
 		.add({
@@ -45,7 +46,7 @@ export default function callLogoTimeline(){
 			width: 100,
 			height: 500,
 			easing: 'easeInOutSine',
-			duration: 500
+			duration: 700
 		})
 		// Draw rectangle 3
 		.add({
@@ -53,7 +54,7 @@ export default function callLogoTimeline(){
 			width: 500,
 			height: 100,
 			easing: 'easeInOutSine',
-			duration: 500
+			duration: 700
 		})
 		// Draw rectangle 4
 		.add({
@@ -61,7 +62,7 @@ export default function callLogoTimeline(){
 			width: 100,
 			height: 300,
 			easing: 'easeInOutSine',
-			duration: 500
+			duration: 700
 		})
 		// Draw rectangle 5
 		.add({
@@ -69,33 +70,33 @@ export default function callLogoTimeline(){
 			width: 300,
 			height: 100,
 			easing: 'easeInOutSine',
-			duration: 500
+			duration: 700
 		})
 		// fadein the shadow polygons
 		.add({
 			targets: '#svgAttributes .shadow-poly',
 			opacity: 0.2,
 			easing: 'easeInOutSine',
-			duration: 500		
+			duration: 700		
 		})
 		// fadein rectangle gradients
 		.add({
 			targets: '#svgAttributes .grad-svg-rect',
 			opacity: 0.1,
 			easing: 'easeInOutSine',
-			duration: 500
+			duration: 500,
 		})
 		// scale and rotate svg
 		.add({
 			targets: '#svgAttributes svg',
 			scale: {
 				value: 0.5,
-				duration: 1000,
-				easing: 'easeInOutQuart'
+				duration: 1500,
+				easing: 'easeInOutQuart',
 			},
 			rotate: {
 				value: 315,
-				duration: 1000,
+				duration: 1500,
 				delay: 1000,
 				easing: 'easeInOutSine'
 			},
@@ -240,7 +241,7 @@ function loopLine(){
 function animateButton(){
 	
 	// revert button to default opacity
-	$('#button-animate').css('opacity', '1');
+	$('.button-pulse').css('opacity', '1');
 
 	// timeline to animate button
 	const buttonTimeline = anime.timeline();
@@ -248,7 +249,7 @@ function animateButton(){
 	buttonTimeline
 		// fade button in
 		.add({
-			targets: '#button-animate .line',
+			targets: '.button-pulse',
 			opacity: [0,1],
 			easing: 'easeOutExpo',
 			duration: 2000,

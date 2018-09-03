@@ -1,16 +1,22 @@
 
 @import "../mixins/_responsive-mixins.scss";
 
+
+#button-animate-container {
+	padding: 0 30px;
+}
+
+
 /* Button 1 - Pulse Styles */
 .button-pulse {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
 	font-size: 18px;
 	background: none;
-	border: 3px solid;
+	border: 2px solid;
 	line-height: 1;
-	margin: 15px;
-	padding: 15px 30px;
+	margin: 8px;
+	padding: 10px 20px;
 	cursor: pointer;
 	text-transform: uppercase;
 	display: inline-block;
@@ -49,7 +55,7 @@
 .button-pulse {
 	@include for-width-small-1-under {
 		border: 2px solid;
-		padding: 10px 20px;
+		padding: 8px 16px;
 		font-size: 16px;
 	}
 

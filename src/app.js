@@ -34,14 +34,15 @@ if(process.env.NODE_ENV === 'production'){
 	app.use(morgan('combined', 
 		{
 			skip: function(req, res){
-				return res.statusCode < 400
+				return res.statusCode < 400;
 			},
 			stream: logger.streamError
 		}
 	));
 }
+
 // Development logging
-else{
+/*else if (process.env.NODE_ENV === 'development'){
   // add console logger for development (debug and under)
   logger.add(new winston.transports.Console({
     level: 'debug',
@@ -53,7 +54,7 @@ else{
   app.use(morgan('dev', {
     stream: logger.streamInfo
   }));
-}
+}*/
 
 logger.debug('Winston & Morgan logging up and running')
 
@@ -108,7 +109,7 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res) {
   // variables to be used in ejs template
   // if development attach error message, otherwise string 'Error'
-  res.locals.message =  process.env.NODE_ENV === 'development' ? err.message : 'Error';
+  res.locals.message =  process.env.NODE_ENV === 'development' ? err.message : 'Error!' ;
   // if development attach error object, otherwise nothing
   res.locals.error = process.env.NODE_ENV === 'development' ? err : {};
 
