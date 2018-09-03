@@ -62,7 +62,10 @@ router.get('/contact', function(req, res, next) {
 
 
 router.get('/error', function(req, res, next) {
-  res.sendFile('./inde.html');
+  res.sendFile(
+    'indx.html', 
+    {root: path.join(__dirname, '../html')}
+  );
 });
 
 module.exports = router;

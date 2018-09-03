@@ -35,9 +35,7 @@
     "morgan": "^1.9.0",
     "nodemon": "^1.18.3",
     "popper.js": "^1.14.4",
-    "winston": "^3.0.0"
-  },
-  "devDependencies": {
+    "winston": "^3.0.0",
     "@fortawesome/fontawesome-free": "^5.2.0",
     "autoprefixer": "^9.1.1",
     "babel-core": "^6.26.3",

@@ -40,9 +40,8 @@ if(process.env.NODE_ENV === 'production'){
 		}
 	));
 }
-
 // Development logging
-/*else if (process.env.NODE_ENV === 'development'){
+else if (process.env.NODE_ENV === 'development'){
   // add console logger for development (debug and under)
   logger.add(new winston.transports.Console({
     level: 'debug',
@@ -54,7 +53,7 @@ if(process.env.NODE_ENV === 'production'){
   app.use(morgan('dev', {
     stream: logger.streamInfo
   }));
-}*/
+}
 
 logger.debug('Winston & Morgan logging up and running')
 
@@ -82,23 +81,24 @@ logger.debug('Static ~/public/ directory set')
 
 // Use routes
 app.use('/', indexRouter);
-logger.debug('Routes ready')
-
+logger.debug('Routes ready');
 
 // 404 Middleware
 app.use(function(req, res, next) {
 
   logger.info(`404 page hit by url "${req.url}"`);
 
-	res.status(404);
+  logger.info('404 hit');
+
+  res.status(404);
   // give template the url that caused 404
   res.sendFile(
     '404.html', 
     {root: path.join(__dirname, './html')},
-    function(err){
-      if(err){
+    function(error){
+      if(error){
         logger.error('Failed to send 404 page');
-        next(err);
+        next(error);
       }
 
     }
@@ -106,7 +106,7 @@ app.use(function(req, res, next) {
 });
 
 // Error Middleware
-app.use(function(err, req, res) {
+app.use(function(err, req, res, next) {
   // variables to be used in ejs template
   // if development attach error message, otherwise string 'Error'
   res.locals.message =  process.env.NODE_ENV === 'development' ? err.message : 'Error!' ;
@@ -128,5 +128,7 @@ app.use(function(err, req, res) {
     }
   );
 });
+
+
 
 module.exports = app;

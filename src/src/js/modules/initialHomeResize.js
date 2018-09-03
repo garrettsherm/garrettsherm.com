@@ -14,7 +14,7 @@ export default function initialHomeResize(){
 	// if homeContainer > window then no need to add padding to center
 	// default to 30px
 	if(homeContainerEl.height() > windowHeight){
-		$('#svgAttributes svg').css('margin-top', '30px');
+		$('#svgAttributes svg').css('margin-top', '70px');
 		
 		// make sure the background gradient covers entire homeContainer
 		minHeightHomeContainer();

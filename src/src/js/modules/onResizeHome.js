@@ -39,7 +39,7 @@ export default function resizeMarginTopLogo(){
 	} 
 	// if the homeContainer >= window no need for margin-top 
 	else {
-		return 0;
+		return 30;
 	}
 	
 }
