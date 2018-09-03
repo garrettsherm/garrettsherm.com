@@ -29,6 +29,12 @@ $(function(){
 	// Initial center of logo svg
 	initialHomeResize();
 
+	const homeContainerHeight = $('#home-container').height();
+
+	if(homeContainerHeight > $('.full-height-width').height()) {
+		$('.full-height-width').css('min-height', homeContainerHeight);
+	}
+
 	// Start animation of logo/title/description/button
 	callLogoTimeline();
 });
@@ -38,6 +44,12 @@ $(function(){
 // set to only fire 500ms after last call to resize finished
 $(window).on('resize', debounce(function(){
 
+	const test = $('#desc-animate .letters').width();
+
+	$('#desc-animate .line').css({'transform': 'translateX('+ test +'px)'});
+
+	const homeContainerEl = $('#home-container');
+
 	// get the new margin-top needed to center content, 0 if screen too small to center
 	const newMarginTop = resizeMarginTopLogo();
 	
@@ -45,9 +57,12 @@ $(window).on('resize', debounce(function(){
 	$('#svgAttributes svg').css('margin-top', newMarginTop);
 		
 	// Calculate the actual height of the homecontainer without margin-top
-	const homeContainerHeight = $('#home-container').height() - newMarginTop;
 
-	// ensure that the full-height-width background covers the entire homeContainer
-	$('.full-height-width').css('min-height', homeContainerHeight);
-
+	if(homeContainerEl.height() > $('.full-height-width').height()) {
+		$('.full-height-width').css('min-height', homeContainerEl.height());
+	}
+	else{
+		// ensure that the full-height-width background covers the entire homeContainer
+		$('.full-height-width').css('min-height', homeContainerEl.height());
+	}
 }, 500));

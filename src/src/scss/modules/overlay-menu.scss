@@ -83,11 +83,11 @@
 
 		.menu-icon {
 			display:inline-block;
-			margin-top: 30px;
-			margin-left: 30px;
+			margin-top: 40px;
+			margin-left: 40px;
 
 			.menu-icon-item{
-				font-size: 35px;
+				font-size: 40px;
 				color: #222222;
 
 				&:hover {
@@ -117,14 +117,14 @@
 
 		.menu-icon{
 			@include for-width-small-4-under {
-				margin-top: 10px;
-				margin-left: 10px;
+				margin-top: 25px;
+				margin-left: 25px;
 			}
 
 			.menu-icon-item {
 
 				@include for-width-small-4-under {
-					font-size: 26px;
+					font-size: 30px;
 				}
 
 			}

@@ -240,7 +240,7 @@ function loopLine(){
 
 // Function to start button animation
 function animateButton(){
-	
+
 	// revert button to default opacity
 	$('.button-pulse').css('opacity', '1');
 
