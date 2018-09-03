@@ -37,7 +37,7 @@ export default function callLogoTimeline(){
 			height: 100,
 			easing: 'easeInOutSine',
 			direction: 'alternate',
-			duration: 700,
+			duration: 500,
 			delay: 1200
 		})
 		// Draw rectangle 2
@@ -46,7 +46,7 @@ export default function callLogoTimeline(){
 			width: 100,
 			height: 500,
 			easing: 'easeInOutSine',
-			duration: 700
+			duration: 500
 		})
 		// Draw rectangle 3
 		.add({
@@ -54,7 +54,7 @@ export default function callLogoTimeline(){
 			width: 500,
 			height: 100,
 			easing: 'easeInOutSine',
-			duration: 700
+			duration: 500
 		})
 		// Draw rectangle 4
 		.add({
@@ -62,7 +62,7 @@ export default function callLogoTimeline(){
 			width: 100,
 			height: 300,
 			easing: 'easeInOutSine',
-			duration: 700
+			duration: 500
 		})
 		// Draw rectangle 5
 		.add({
@@ -70,33 +70,34 @@ export default function callLogoTimeline(){
 			width: 300,
 			height: 100,
 			easing: 'easeInOutSine',
-			duration: 700
-		})
-		// fadein the shadow polygons
-		.add({
-			targets: '#svgAttributes .shadow-poly',
-			opacity: 0.2,
-			easing: 'easeInOutSine',
-			duration: 700		
+			duration: 500
 		})
 		// fadein rectangle gradients
 		.add({
 			targets: '#svgAttributes .grad-svg-rect',
 			opacity: 0.1,
 			easing: 'easeInOutSine',
-			duration: 500,
+			duration: 200,
+		})
+		// fadein the shadow polygons
+		.add({
+			targets: '#svgAttributes .shadow-poly',
+			opacity: 0.2,
+			easing: 'easeInOutSine',
+			duration: 500		
 		})
 		// scale and rotate svg
 		.add({
 			targets: '#svgAttributes svg',
+			delay: 300,
 			scale: {
 				value: 0.5,
-				duration: 1500,
+				duration: 1000,
 				easing: 'easeInOutQuart',
 			},
 			rotate: {
 				value: 315,
-				duration: 1500,
+				duration: 1000,
 				delay: 1000,
 				easing: 'easeInOutSine'
 			},
@@ -154,7 +155,7 @@ function animateName(){
 		.add({
 			// scale out then in
 			targets: '#name-animate .word',
-			scale: [16, 1],
+			scale: [0, 1],
 			opacity: [0, 1],
 			easing: 'easeOutCirc',
 			duration: 800,
