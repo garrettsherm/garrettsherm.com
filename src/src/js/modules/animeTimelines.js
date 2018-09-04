@@ -37,7 +37,7 @@ export default function callLogoTimeline(){
 			height: 100,
 			easing: 'easeInOutSine',
 			direction: 'alternate',
-			duration: 500,
+			duration: 400,
 			delay: 1200
 		})
 		// Draw rectangle 2
@@ -46,7 +46,7 @@ export default function callLogoTimeline(){
 			width: 100,
 			height: 500,
 			easing: 'easeInOutSine',
-			duration: 500
+			duration: 400
 		})
 		// Draw rectangle 3
 		.add({
@@ -54,7 +54,7 @@ export default function callLogoTimeline(){
 			width: 500,
 			height: 100,
 			easing: 'easeInOutSine',
-			duration: 500
+			duration: 400
 		})
 		// Draw rectangle 4
 		.add({
@@ -62,7 +62,7 @@ export default function callLogoTimeline(){
 			width: 100,
 			height: 300,
 			easing: 'easeInOutSine',
-			duration: 500
+			duration: 400
 		})
 		// Draw rectangle 5
 		.add({
@@ -70,7 +70,7 @@ export default function callLogoTimeline(){
 			width: 300,
 			height: 100,
 			easing: 'easeInOutSine',
-			duration: 500
+			duration: 400
 		})
 		// fadein rectangle gradients
 		.add({
@@ -253,14 +253,14 @@ function animateButton(){
 			targets: '.button-pulse',
 			opacity: [0,1],
 			easing: 'easeOutExpo',
-			duration: 2000,
+			duration: 1000,
 			complete: revertDescription
 		});
 } 
 
 // Function to remove spans from description (for seo/responsive display)
 function revertDescription() {
-	$('#desc-animate .letters').replaceWith('<span class="letters">Full Stack Developer</span>');
+	$('#desc-animate .letters').replaceWith('<span class="letters">Web Developer</span>');
 	infiniteRotate();
 }
 

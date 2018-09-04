@@ -58,11 +58,6 @@ $(window).on('resize', debounce(function(){
 		
 	// Calculate the actual height of the homecontainer without margin-top
 
-	if(homeContainerEl.height() > $('.full-height-width').height()) {
-		$('.full-height-width').css('min-height', homeContainerEl.height());
-	}
-	else{
-		// ensure that the full-height-width background covers the entire homeContainer
-		$('.full-height-width').css('min-height', homeContainerEl.height());
-	}
+	$('.full-height-width').css('min-height', homeContainerEl.height());
+
 }, 500));

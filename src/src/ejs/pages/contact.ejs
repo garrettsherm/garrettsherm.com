@@ -7,9 +7,12 @@
 <% overlayMenu= require('./partials/header_menu.ejs') %>
 <% 
 	seoOptions = {
-		title: 'Contact | Garrett Sherman',
-		desc: "Looking for web dev services? The rest will go here"
-	} 
+		title: 'Contact | Garrett Sherman - Web Developer Toronto',
+		desc: "Looking for a web developer? Let's chat! I do a little bit of everything, front-end, back-end, web design, digital marketing, and more!.",
+		ogtitle: "Get in touch with Garrett.",
+		ogdesc: "Welcome to Garrett Sherman's Personal Website! Garrett Sherman is a Web Developer living in Toronto, Canada.",
+		ogurl: "https://garrettsherm.com/contact"
+	}
 %>
 <!DOCTYPE>
 <html>
@@ -29,7 +32,7 @@
 
 		<div class="gradient-bg full-height-width">
 			<div class="centered-container">
-				<div class="text-center centered-content">
+				<div  id="contact-container" class="text-center centered-content">
 					<h1 id="title-contact">Let's Chat</h1>
 					<div id="social-icons-contact">
 						<%= socialIcons() %>

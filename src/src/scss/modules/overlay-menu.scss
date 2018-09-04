@@ -1,5 +1,8 @@
 @import "../mixins/_responsive-mixins.scss";
 
+#overlay-menu-items-container{
+	width: 95%;
+}
 
 #close-menu-container {
 	z-index: 300;
@@ -88,19 +91,18 @@
 
 			.menu-icon-item{
 				font-size: 40px;
-				color: #222222;
-
-				&:hover {
-					color: #8E221D;
-					cursor: pointer;
-				}
+				color: #ffffff;
+				background-color: #222222;
+				padding: 6px 12px;
+				transition: .25s all;				
 
 				i {
 				transition: .25s all;
+				cursor: pointer;
 
-				
 					&:hover {
 						transform: rotate(90deg);
+						color: #8E221D;
 					}
 				}
 			}
