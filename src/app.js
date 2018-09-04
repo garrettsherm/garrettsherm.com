@@ -20,17 +20,17 @@ const logger = require('./utils/logger');
 // logging based on environment
 // Production logging
 if(process.env.NODE_ENV === 'production'){
-  // add console logger for production (error only)
-  logger.add(new winston.transports.Console({
-    level: 'error',
-    handleExceptions: true,
-    json: false,
-    format: winston.format.combine(
-      winston.format.simple()
-    )
-  }));
+	// add console logger for production (error only)
+	logger.add(new winston.transports.Console({
+		level: 'error',
+		handleExceptions: true,
+		json: false,
+		format: winston.format.combine(
+			winston.format.simple()
+		)
+	}));
 
-  // morgan http errors only, stream to winston for file saving & console
+	// morgan http errors only, stream to winston for file saving & console
 	app.use(morgan('combined', 
 		{
 			skip: function(req, res){
@@ -42,28 +42,28 @@ if(process.env.NODE_ENV === 'production'){
 }
 // Development logging
 else if (process.env.NODE_ENV === 'development'){
-  // add console logger for development (debug and under)
-  logger.add(new winston.transports.Console({
-    level: 'debug',
-    handleExceptions: true,
-    json: false,
-    format: winston.format.simple()
-  }));
-  // morgan http info requests, stream to winston for file saving & console
-  app.use(morgan('dev', {
-    stream: logger.streamInfo
-  }));
+	// add console logger for development (debug and under)
+	logger.add(new winston.transports.Console({
+		level: 'debug',
+		handleExceptions: true,
+		json: false,
+		format: winston.format.simple()
+	}));
+	// morgan http info requests, stream to winston for file saving & console
+	app.use(morgan('dev', {
+		stream: logger.streamInfo
+	}));
 }
 
-logger.debug('Winston & Morgan logging up and running')
+logger.debug('Winston & Morgan logging up and running');
 
 // helmet only in production
 // disable strict ssl for now until up and running
 if(process.env.NODE_ENV === 'production'){
-  app.use(helmet({
-    hsts: false
-  }));
-  logger.info('helmet initialized');
+	app.use(helmet({
+		hsts: false
+	}));
+	logger.info('helmet initialized');
 }
 
 // view engine setup
@@ -76,7 +76,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Static directory
 app.use(express.static(path.join(__dirname, 'public')));
-logger.debug('Static ~/public/ directory set')
+logger.debug('Static ~/public/ directory set');
 
 
 // Use routes
@@ -86,47 +86,47 @@ logger.debug('Routes ready');
 // 404 Middleware
 app.use(function(req, res, next) {
 
-  logger.info(`404 page hit by url "${req.url}"`);
+	logger.info(`404 page hit by url "${req.url}"`);
 
-  logger.info('404 hit');
+	logger.info('404 hit');
 
-  res.status(404);
-  // give template the url that caused 404
-  res.sendFile(
-    '404.html', 
-    {root: path.join(__dirname, './html')},
-    function(error){
-      if(error){
-        logger.error('Failed to send 404 page');
-        next(error);
-      }
-
-    }
-  );
+	res.status(404);
+	// give template the url that caused 404
+	res.sendFile(
+		'404.html', 
+		{root: path.join(__dirname, './html')},
+		function(error){
+			if(error){
+				logger.error('Failed to send 404 page');
+				next(error);
+			}
+		}
+	);
 });
 
 // Error Middleware
-app.use(function(err, req, res, next) {
-  // variables to be used in ejs template
-  // if development attach error message, otherwise string 'Error'
-  res.locals.message =  process.env.NODE_ENV === 'development' ? err.message : 'Error!' ;
-  // if development attach error object, otherwise nothing
-  res.locals.error = process.env.NODE_ENV === 'development' ? err : {};
+app.use(function(err, req, res, next) { 
+	// variables to be used in ejs template
+	// if development attach error message, otherwise string 'Error'
+	res.locals.message =  process.env.NODE_ENV === 'development' ? err.message : 'Error!' ;
+	// if development attach error object, otherwise nothing
+	res.locals.error = process.env.NODE_ENV === 'development' ? err : {};
 
-  logger.error(`Error occured at url "${req.url}"`, { errorMsg: err.message, errorStatus: err.status, url: req.url });
+	logger.error(`Error occured at url "${req.url}"`, { errorMsg: err.message, errorStatus: err.status, url: req.url });
 
-  res.status(500);
-  res.render('error', 
-    function(error, html){
-    // error rendering 'error' template
-      if(error){
-        logger.error(`Error rendering error template by url "${req.url}"`)
-        res.send('Error rendering "Error" template');
-      }
-      // no error send rendered template
-      res.send(html);
-    }
-  );
+	res.status(500);
+	res.render('error', 
+		function(error, html){
+		// error rendering 'error' template
+			if(error){
+				logger.error(`Error rendering error template by url "${req.url}"`);
+				res.send('Error rendering "Error" template');
+				next(error);
+			}
+			// no error send rendered template
+			res.send(html);
+		}
+	);
 });
 
 
