@@ -1,4 +1,6 @@
 import addOverlayMenuClick from '../modules/overlayMenu';
+import lazyLoadImages from '../modules/lazyLoadingImg';
+
 
 // projects page css
 import '../../scss/modules/reset.scss';
@@ -10,3 +12,4 @@ import '../../scss/pages/projects/projects.scss';
 
 
 addOverlayMenuClick();
+lazyLoadImages();
