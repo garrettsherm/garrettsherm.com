@@ -9,7 +9,7 @@
 
 #projects-container {
 
-	padding-top: 50px;
+	padding-top: 130px;
 }
 
 .row-projects {
@@ -33,6 +33,11 @@
 	padding: 20px;
 	background: #ffffff;
 	box-shadow: 0 15px 6px -6px rgba(0, 0, 0, 0.8);
+	transition: all .25s;
+
+	&:hover {
+		box-shadow: 0 30px 6px -6px rgba(0, 0, 0, 0.8);
+	}
 
 	p {
 		font-family: "Open Sans", sans serif;
@@ -42,6 +47,8 @@
 		max-width: 100%;
 		border: 2px solid rgba(0, 0, 0, 0.8);
 		box-shadow: 5px 5px rgba(0, 0, 0, 0.8);
+		transition: all .25s;
+
 
 		&:hover {
 			border: 2px solid rgba(0, 0, 0, 0.8);
@@ -58,6 +65,7 @@
 			color: #222222;
 
 			&:hover {
+				transition: all .25s;
 				color: #8E221D;
 			}
 		}
@@ -71,6 +79,7 @@
 			font-size: 22px;
 
 			&:hover {
+				transition: all .25s;
 				color: #8E221D;
 			}
 		}

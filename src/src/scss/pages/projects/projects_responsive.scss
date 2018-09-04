@@ -8,3 +8,9 @@
 		}
 	}
 }
+
+#projects-container {
+		@include for-width-small-4-under {
+			padding-top: 100px;
+		}
+}
