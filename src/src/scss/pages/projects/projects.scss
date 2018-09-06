@@ -7,22 +7,23 @@
 	padding: 10px;
 }
 
-#projects-container {
-
-	padding-top: 130px;
-}
-
 .row-projects {
 	margin: 20px 0;
 }
 
-#projects-title {
-	margin: 20px 0;
+#projects-title-bg{
 
-	h1 {
-		color: #ffffff;
-		filter: drop-shadow(rgba(0,0,0,0.5) 5px 5px 5px);	
-	}
+	padding: 75px 0;
+	background-color: #8E221D;
+
+	#projects-title {
+		margin: 20px 0;
+
+		h1 {
+			color: #ffffff;
+			filter: drop-shadow(rgba(0,0,0,0.5) 5px 5px 5px);	
+		}
+}
 }
 
 .project-container {

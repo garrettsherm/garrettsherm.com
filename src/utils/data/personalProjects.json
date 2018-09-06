@@ -1,0 +1,38 @@
+[
+	{
+		"title": "garrettsherm.com",
+		"desc": "My personal website built using Node.js, Express, & Webpack. Deployed via DigitalOcean using Nginx, Docker, & Let's Encrypt.",
+		"image": "/images/project-garrettsherm.png",
+		"link": "https://github.com/garrettsherm/garrettsherm.com"
+	},
+	{
+		"title": "One on One Chat",
+		"desc": "Realtime one on one chat built using Node.js, Express, Socket.io, React, React Router, and Bootstrap.",
+		"image": "/images/project-one-on-one.png",
+		"link": "https://github.com/garrettsherm/one-on-one"
+	},
+	{
+		"title": "React Quote App",
+		"desc": "SPA built using React and React Transition Group. Example application for calculating a quote using conditional rendering..",
+		"image": "/images/project-quote-app.png",
+		"link": "https://github.com/garrettsherm/quote-app"
+	},
+	{
+		"title": "React + Redux Leaderboard",
+		"desc": "SPA built using React, Redux, and Bootstrap. Example application for managing a leaderboard.",
+		"image": "/images/project-redux-leaderboard.png",
+		"link": "https://github.com/garrettsherm/redux-leaderboard"
+	},
+	{
+		"title": "Dang That's Delicious",
+		"desc": "Yelp clone built using Node.js, Express, MongoDB, Passportjs, Nodemailer, and Ajax. Project for Wes Bos' Learn Node course (learnnode.com).",
+		"image": "/images/project-dang-thats-delicious.png",
+		"link": "https://github.com/garrettsherm/dang-thats-delicious"
+	},
+	{
+		"title": "Catch of the Day",
+		"desc": "Fish ordering SPA built using React, React Router, and Firebase. Project for Wes Bos' React course (reactforbeginners.com).",
+		"image": "/images/project-catch-of-the-day.png",
+		"link": "https://github.com/garrettsherm/catch-of-the-day"
+	}
+]
