@@ -3,14 +3,30 @@
 .project-card {
 
 	.project-card-title {
-		@include for-width-large-1-under {
+		@include for-width-medium-under {
 			font-size: 22px;
 		}
 	}
 }
 
-#projects-container {
-		@include for-width-small-4-under {
-			padding-top: 100px;
+.row-projects {
+	
+	.project-container {
+
+		.project-card {
+
+			.project-card-title {
+				@include for-width-large-1-under {
+					font-size: 20px;
+				}
+			}
+
+			p {
+				@include for-width-large-1-under {
+					font-size: 14px;
+				}
+			}
+
 		}
+	}
 }

@@ -1,6 +1,6 @@
 [
 	{
-		"title": "garrettsherm.com",
+		"title": "Personal Website",
 		"desc": "My personal website built using Node.js, Express, & Webpack. Deployed via DigitalOcean using Nginx, Docker, & Let's Encrypt.",
 		"image": "/images/project-garrettsherm.png",
 		"link": "https://github.com/garrettsherm/garrettsherm.com"

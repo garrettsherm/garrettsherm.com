@@ -24,51 +24,77 @@
 
 		<div id="projects-title-bg">
 			<div class="container">
-
 				<div id="projects-title" class="row">
 					<div class="col-md-12 text-center">
 						<h1>Some of My Work</h1>
 						<div id="projects-buttons-container">
-							<div id="button-projects-work" class="button-plain button-projects">
+							<div id="button-projects-work" class="button-plain button-min">
 								Work
 							</div>
-							<div id="button-projects-personal" class="button-plain button-projects">
+							<div id="button-projects-personal" class="button-plain button-min">
 								Personal
 							</div>
 						</div>
 					</div>
-
 				</div>
-
 			</div>
 		</div>
 
-		<div id="projects-bg">
 
+		<div id="work-projects-container" class="project-type-container">
 			<div class="project-type-title">
 				<div class="col-md-12 text-center">
 					<h2>Work</h2>
 				</div>
 			</div>
-
-			<div id="work-projects-container" class="container">
+			<div class="container">
 				<% projects.forEach(function(project, i){ %>
 					<%- include('partials/project-card', {project: project, i: i}) %>
 				<% }); %>					
 			</div>
+		</div>
 
+		<div class="project-cta-container">
+			<div class="project-cta-title">
+				<div class="col-md-12 text-center">
+					<h2>Need a website?</h2>
+						<div id="projects-buttons-container">
+							<div class="button-plain">
+								<a href="/contact">
+									Let's Chat
+								</a>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="personal-projects-container" class="project-type-container">
 			<div class="project-type-title">
 				<div class="col-md-12 text-center">
 					<h2>Personal</h2>
 				</div>
 			</div>
-
-			<div id="personal-projects-container" class="container">
+			<div class="container">
 				<% personalProjects.forEach(function(project, i){ %>
 					<%- include('partials/project-card', {project: project, i: i}) %>
 				<% }); %>			
 			</div>
+		</div>
 
+		<div class="project-cta-container grey-bg">
+			<div class="project-cta-title">
+				<div class="col-md-12 text-center">
+					<h2>Follow me on Github</h2>
+						<div id="projects-buttons-container">
+							<a href="https://github.com/garrettsherm/" target="_blank">
+								<span class="social-icon-all project-github-icon ">
+									<i class="fa fa-github"></i>
+								</span>
+							</a>
+						</div>
+				</div>
+			</div>
 		</div>
 		
 		

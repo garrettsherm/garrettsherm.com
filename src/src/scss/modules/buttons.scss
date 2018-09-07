@@ -16,7 +16,6 @@
 	color: #ffffff;
 	border-color: #ffffff;
 	transition: all 0.25s;
-	max-width: 150px;
 
 	a {
 		text-decoration: none;
@@ -68,6 +67,10 @@
 
 }
 
-.button-projects {
+.button-min {
 	min-width:150px;
+}
+
+.button-max {
+	max-width:150px;
 }

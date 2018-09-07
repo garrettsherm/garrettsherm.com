@@ -5,8 +5,8 @@
 
 	padding-top: 125px;
 	padding-bottom: 25px;
-
-	background-color: #8E221D;
+	width: 100%;
+	background-color: #5F8D6C;
 
 	#projects-title {
 
@@ -22,81 +22,111 @@
 	}
 }
 
-// main projects background
-#projects-bg {
-	width:100%;
-	min-height:100%;
+// project type containers
+.project-type-container {
+	width: 100%;
 	background-color: #3775B0;
-	padding: 10px;
-}
-
-
-// individual projects
-.row-projects {
-	margin: 20px 0;
-
-	.project-container {
-		margin-top: 25px;
+	padding: 30px;
+	.project-type-title {
+		padding-top: 40px;
+		color: #222222;
 	}
 }
 
-// individual project cards
-.project-card {
-	padding: 20px;
-	background: #ffffff;
-	box-shadow: 0 15px 6px -6px rgba(0, 0, 0, 0.8);
-	transition: all .25s;
+.project-cta-container {
+	width: 100%;
+	background-color: #8E221D;
+	.project-cta-title {
+		padding: 50px;
+		color: #ffffff;
+		filter: drop-shadow(rgba(0,0,0,0.5) 5px 5px 5px);	
+
+		h2 {
+			padding-bottom: 15px;
+		}
+	}
+}
+
+.grey-bg {
+	background-color: #222222;
+}
+
+.project-github-icon {
+	font-size: 40px;
+	color: #ffffff;
+	transition: all 0.25s
 
 	&:hover {
-		box-shadow: 0 22px 6px -6px rgba(0, 0, 0, 0.8);
+		color: #8E221D;
 	}
-
-	p {
-		font-family: "Open Sans", sans serif;
-	}
-
-	img {
-		max-width: 100%;
-		border: 2px solid rgba(0, 0, 0, 0.8);
-		box-shadow: 5px 5px rgba(0, 0, 0, 0.8);
-		transition: all .25s;
+}
 
 
-		&:hover {
-			border: 2px solid rgba(0, 0, 0, 0.8);
-			box-shadow: 5px 5px #8E221D;
-		}
-	}
+// row of projects
+.row-projects {
+	padding: 20px 0;
+	
+	// individual project cards
+	.project-container {
+		padding-top: 25px;
 
-	.project-card-title {
-		margin: 20px 0;
-		font-size: 26px;
-
-		a {
-			text-decoration: none;
-			color: #222222;
+		.project-card {
+			padding: 20px;
+			background: #ffffff;
+			box-shadow: 0 15px 6px -6px rgba(0, 0, 0, 0.8);
+			transition: all .25s;
 
 			&:hover {
+				box-shadow: 0 22px 6px -6px rgba(0, 0, 0, 0.8);
+			}
+
+			p {
+				font-family: "Open Sans", sans serif;
+			}
+
+			img {
+				max-width: 100%;
+				border: 2px solid rgba(0, 0, 0, 0.8);
+				box-shadow: 5px 5px rgba(0, 0, 0, 0.8);
 				transition: all .25s;
-				color: #8E221D;
+
+
+				&:hover {
+					border: 2px solid rgba(0, 0, 0, 0.8);
+					box-shadow: 5px 5px #8E221D;
+				}
+			}
+
+			.project-card-title {
+				margin: 20px 0;
+				font-size: 26px;
+
+				a {
+					text-decoration: none;
+					color: #222222;
+
+					&:hover {
+						transition: all .25s;
+						color: #8E221D;
+					}
+				}
+			}
+
+			.icon-go-container {
+				margin-top: 10px;
+
+				i {
+					color: #222222;
+					font-size: 22px;
+
+					&:hover {
+						transition: all .25s;
+						color: #8E221D;
+					}
+				}
 			}
 		}
 	}
-
-	.icon-go-container {
-		margin-top: 10px;
-
-		i {
-			color: #222222;
-			font-size: 22px;
-
-			&:hover {
-				transition: all .25s;
-				color: #8E221D;
-			}
-		}
-	}
-
 }
 
 /* Bottom: Responsive Design */
