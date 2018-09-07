@@ -28,20 +28,42 @@
 				<div id="projects-title" class="row">
 					<div class="col-md-12 text-center">
 						<h1>Some of My Work</h1>
+						<div id="projects-buttons-container">
+							<div id="button-projects-work" class="button-plain button-projects">
+								Work
+							</div>
+							<div id="button-projects-personal" class="button-plain button-projects">
+								Personal
+							</div>
+						</div>
 					</div>
+
 				</div>
 
 			</div>
 		</div>
 
 		<div id="projects-bg">
-			<div id="projects-container" class="container">
+
+			<div class="project-type-title">
+				<div class="col-md-12 text-center">
+					<h2>Work</h2>
+				</div>
+			</div>
+
+			<div id="work-projects-container" class="container">
 				<% projects.forEach(function(project, i){ %>
 					<%- include('partials/project-card', {project: project, i: i}) %>
 				<% }); %>					
 			</div>
 
-			<div id="projects-container" class="container">
+			<div class="project-type-title">
+				<div class="col-md-12 text-center">
+					<h2>Personal</h2>
+				</div>
+			</div>
+
+			<div id="personal-projects-container" class="container">
 				<% personalProjects.forEach(function(project, i){ %>
 					<%- include('partials/project-card', {project: project, i: i}) %>
 				<% }); %>			

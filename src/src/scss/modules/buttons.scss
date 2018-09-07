@@ -1,10 +1,7 @@
 
 @import "../mixins/_responsive-mixins.scss";
 
-
-
-/* Button 1 - Pulse Styles */
-.button-pulse {
+.button-plain {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
 	font-size: 18px;
@@ -19,8 +16,7 @@
 	color: #ffffff;
 	border-color: #ffffff;
 	transition: all 0.25s;
-	filter: drop-shadow(rgba(0,0,0,0.5) 5px 5px 5px);
-
+	max-width: 150px;
 
 	a {
 		text-decoration: none;
@@ -30,11 +26,19 @@
 	}
 
 	&:hover, &:focus {
-		animation: pulse 1s;
 		box-shadow: 0 1em 1em 0 rgba(#000000, .4);
 		border-color: #ffffff;
 		background-color: #ffffff;
 		color: #222222;
+	}
+
+}
+
+/* Button 1 - Pulse Styles */
+.button-pulse {
+
+	&:hover, &:focus {
+		animation: pulse 1s;
 	}
 
 }
@@ -62,4 +66,8 @@
 		padding: 7px 14px;
 	}
 
+}
+
+.button-projects {
+	min-width:150px;
 }

@@ -1,5 +1,28 @@
 @import "~bootstrap/dist/css/bootstrap-grid.min.css";
 
+// Header styles (title & buttons)
+#projects-title-bg{
+
+	padding-top: 125px;
+	padding-bottom: 25px;
+
+	background-color: #8E221D;
+
+	#projects-title {
+
+		h1 {
+			color: #ffffff;
+			filter: drop-shadow(rgba(0,0,0,0.5) 5px 5px 5px);	
+		}
+
+		#projects-buttons-container {
+			margin: 25px 0;
+			
+		}
+	}
+}
+
+// main projects background
 #projects-bg {
 	width:100%;
 	min-height:100%;
@@ -7,29 +30,17 @@
 	padding: 10px;
 }
 
+
+// individual projects
 .row-projects {
 	margin: 20px 0;
+
+	.project-container {
+		margin-top: 25px;
+	}
 }
 
-#projects-title-bg{
-
-	padding: 75px 0;
-	background-color: #8E221D;
-
-	#projects-title {
-		margin: 20px 0;
-
-		h1 {
-			color: #ffffff;
-			filter: drop-shadow(rgba(0,0,0,0.5) 5px 5px 5px);	
-		}
-}
-}
-
-.project-container {
-	margin-top: 25px;
-}
-
+// individual project cards
 .project-card {
 	padding: 20px;
 	background: #ffffff;
