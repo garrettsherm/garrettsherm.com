@@ -52,11 +52,5 @@
 		"desc": "Blog built for Allwon Media. Music & lifestyle blog.",
 		"image": "/images/project-allwonmedia.png",
 		"link": "http://allwonmedia.com"
-	},
-	{
-		"title": "Beaux Bijoux",
-		"desc": "E-commerce website built for Beaux Bijoux. Hand crafted jewelry.",
-		"image": "/images/project-beauxbijoux.png",
-		"link": "https://beauxbijoux.ca"
 	}
 ]
